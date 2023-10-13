@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 //vishal
-//this is our new changes in our PBL project.
 
 
 struct node
