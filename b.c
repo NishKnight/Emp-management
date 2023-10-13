@@ -207,51 +207,71 @@ void emp_payroll()
     printf("=================================================================================================================================================================\n");
 }
 
+
 int main()
 {
-    while (1)
+    printf("EMPLOYEE MANAGEMENT SYSTEM\n");
+    printf("\tSIGN UP\n");
+    char username[10], password[10];
+    printf("Enter username: ");
+    scanf("%s",&username);
+    printf("Enter password: ");
+    scanf("%s",&password);
+    printf("Your id created successfully");
+    system("CLS");         
+    printf("EMPLOYEE MANAGEMENT SYSTEM\n");
+    printf("\tLOGIN\n");
+    char username1[10], password1[10];
+    printf("Username: ");
+    scanf("%s",&username1);
+    printf("Password: ");
+    scanf("%s",&password1);
+    if (strcmp(username1, username) == 0 && strcmp(password1, password) == 0)
     {
-        int ch = menu();
-
-        switch (ch)
+        system("CLS");
+        while (1)
         {
-        case 1:
-            add();
-            break;
+            int ch = menu();
 
-        case 2:
-            disp_all();
-            break;
+            switch (ch)
+            {
+            case 1:
+                add();
+                break;
 
-        case 3:
-            disp_one();
-            break;
+            case 2:
+                disp_all();
+                break;
 
-        case 4:
-            del_one();
-            printf("Employee data deleted successfully\n");
-            break;
+            case 3:
+                disp_one();
+                break;
 
-        case 5:
-            del_all();
-            break;
+            case 4:
+                del_one();
+                printf("Employee data deleted successfully\n");
+                break;
 
-        case 6:
-            modify();
-            break;
+            case 5:
+                del_all();
+                break;
 
-        case 7:
-            emp_payroll();
-            break;
+            case 6:
+                modify();
+                break;
 
-        case 8:
-            exit(0);
+            case 7:
+                emp_payroll();
+                break;
 
-        default:
-            printf("WRONG CHOICE!!\nPlease enter a number from 1 to 8 according to your choice.\n");
-            break;
+            case 8:
+                exit(0);
+
+            default:
+                printf("WRONG CHOICE!!\nPlease enter a number from 1 to 8 according to your choice.\n");
+                break;
+            }
         }
     }
-
     return 0;
 }
